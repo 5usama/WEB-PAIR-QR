@@ -19,25 +19,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:` + PORT)
 })
-//Now Import Function In Main File
-dotenv.config()
-import SaveCreds from './some-file.js'
 
-async function main() {
-  const txt = process.env.SESSION_ID
-
-  if (!txt) {
-    console.error('Environment variable not found.')
-    return
-  }
-
-  try {
-    await SaveCreds(txt)
-    console.log('process SaveCreds completed.')
-  } catch (error) {
-    console.error('Error:', error)
-  }
-}
-
-main()
 module.exports = app
