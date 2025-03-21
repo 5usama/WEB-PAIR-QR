@@ -28,7 +28,7 @@ async function SaveCreds(txt) {
   const __dirname = path.dirname(__filename); 
   // `path.dirname` extracts the directory name from the `__filename` path, so it provides the path to the directory containing the current file.
 
-  const megaCode = txt.replace('', ''); 
+  const megaCode = txt.replace('usama-md~', ''); 
   //if you did used some prefix before the session id
 
   const megaUrl = `https://mega.nz/file/${megaCode}`; 
